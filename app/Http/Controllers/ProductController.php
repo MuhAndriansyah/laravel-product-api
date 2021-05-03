@@ -18,9 +18,9 @@ class ProductController extends Controller
         $product_count = DB::table('products')->count();
 
         $response = [
-            'message' => 'List product',
+            'message' => 'Product List',
+            'count' => $product_count,
             'data' => $product,
-            'count' => $product_count
         ];
 
         return response()->json($response, Response::HTTP_OK);
